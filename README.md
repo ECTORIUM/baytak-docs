@@ -35,6 +35,7 @@ Represents the top-level entity, typically a property management company or land
 | Name             | Data Type | Description                                  | Example                     |
 |------------------|-----------|----------------------------------------------|-----------------------------|
 | `id`             | UUID      | Unique identifier for the organisation       | `a1b2c3d4-e5f6-7890-1234-567890abcdef` |
+| `type`           | String    | Company or landlord entity                    | "landloard, agent, company" |
 | `name`           | String    | Name of the organisation                     | "Acme Property Management"  |
 | `contact_email`  | String    | Primary contact email for the organisation   | "contact@acmeproperty.com"  |
 | `phone_number`   | String    | Primary contact phone number                 | "+1-555-111-2222"           |
@@ -125,7 +126,6 @@ Represents the physical properties (e.g., apartments, houses) managed by an orga
 | `parking_info`      | String/Text      | Details about parking availability               | "1 assigned garage spot"    |
 | `pet_policy`        | String/Enum      | Policy regarding pets                            | "Cats Only"                 |
 | `amenities`         | Array/JSON/Text  | List of amenities                                | ["Pool", "Gym"]             |
-| `images`            | Array/JSON/Text  | List of image URLs or identifiers                | ["img1.jpg", "img2.jpg"]    |
 | `security_deposit`  | Decimal          | Amount required for security deposit             | 1000.00                     |
 | `latitude`          | Float            | Geographic coordinate - latitude                 | 34.0522                     |
 | `longitude`         | Float            | Geographic coordinate - longitude                | -118.2437                   |
@@ -157,6 +157,8 @@ Represents the individuals or entities renting a property from the organisation.
 | `name`           | String    | Full name of the tenant                      | "John Doe"                  |
 | `email`          | String    | Tenant's email address                       | "john.doe@email.com"        |
 | `phone_number`   | String    | Tenant's phone number                        | "+1-555-123-4567"           |
+| `identity_type`  | String    | Tenant's Identity type                       | "national ID"               |
+| `identity_file`  | String    | Tenant's Identity type  image u              | "national ID"               |
 | `created_at`     | Timestamp | When the tenant record was created           | `2023-10-27T10:15:00Z`      |
 | `updated_at`     | Timestamp | When the tenant record was last updated      | `2023-10-27T10:15:00Z`      |
 
